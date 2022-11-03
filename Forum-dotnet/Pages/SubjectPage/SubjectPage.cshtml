@@ -1,0 +1,29 @@
+﻿@page
+@model Forum_dotnet.Pages.SubjectPage.SubjectPageModel
+@{
+}
+
+<div class="row">
+	<div class="col">
+		<div class="d-flex justify-content-end">
+			<a class="btn btn-sm btn-dark" asp-page="./../CategoryPage/CategoryPage" asp-route-id="@Model.subject.categoryId">Back</a>
+		</div>
+		<h1 class="Title text-dark text-center my-4">@Model.subject.title</h1>
+
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<div class="author">
+					<h4 class="h4 text-dark text-center bg-info p-3">@Model.user.name</h4>
+					<p class="postedSubject my-4">posted :<span class="text-sm-center">@Model.user.createdAt</span></p>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="subjectBody">
+					<p class="h6 text-dark">@Model.subject.body</p>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+</div>

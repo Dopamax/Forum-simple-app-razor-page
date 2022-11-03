@@ -1,0 +1,35 @@
+﻿@page
+@model Forum_dotnet.Pages.CategoryPage.CategoryPageModel
+@{
+}
+<div class="row">
+	<div class="col">
+		<div class="d-flex justify-content-between">
+			<a class="btn btn-sm btn-primary" asp-page="./../CreateSubjectPage/CreateSubjectPage" asp-route-categoryId="@Model.categoryId">New topic</a>
+			<a class="btn btn-sm btn-dark" asp-page="./../Forum/Forum">Back</a>
+
+		</div>
+		
+
+		@if (Model.subjects.Count() == 0)
+		{
+			<h2 class="text-center">Nothing...</h2>
+		}
+		else
+		{
+			<h1 class="text-dark text-center my-3">Topics</h1>
+			@foreach (var item in Model.subjects)
+			{
+				<div class="row">
+					<div class="col">
+						<div class="subject d-flex justify-content-between">
+							<h4 class="text-dark">@item.title</h4>
+							<a class="btn btn-sm btn-outline-dark" asp-route-id="@item.id" asp-page="./../SubjectPage/SubjectPage">Enter</a>
+						</div>
+					</div>
+				</div>
+			}
+		}
+		
+	</div>
+</div>

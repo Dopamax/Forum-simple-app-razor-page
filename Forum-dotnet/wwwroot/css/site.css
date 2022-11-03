@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.categoryName{
+    border:1px solid black;
+    padding:8px;
+    background-color:wheat;
+}
+
+.subject{
+    padding:8px;
+    border-bottom : 1px solid black;
+    background-color:khaki;
+}
+
+.author{
+    background-color:aliceblue;
+    border:1px solid black;
+    padding:15px;
+}
+
+.subjectBody {
+    background-color: aliceblue;
+    border:1px solid black;
+    padding:15px;
+}
+
+.postedSubject{
+    font-size:10px;
+}

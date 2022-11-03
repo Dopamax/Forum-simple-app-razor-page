@@ -1,0 +1,29 @@
+﻿@page
+@model Forum_dotnet.Pages.CreateSubjectPage.CreateSubjectPageModel
+@{
+}
+
+<div class="row">
+	<div class="col">
+		<h1 class="h1 text-center">New topic</h1>
+
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<form method="post">
+					<div class="form-group mt-3">
+						<label asp-for="@Model.subject.title">Title</label>
+						<input class="form-control" asp-for="@Model.subject.title" />
+					</div>
+					<div class="form-group mt-3">
+						<label asp-for="@Model.subject.body">Content</label>
+						<textarea class="form-control" asp-for="@Model.subject.body"></textarea>
+					</div>
+
+					<button class="btn btn-ms btn-primary my-3" type="submit">Submit</button>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+</div>
